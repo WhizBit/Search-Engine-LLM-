@@ -1,4 +1,3 @@
-!pip install langchain_groq
 import streamlit as st
 from langchain_groq import ChatGroq
 from langchain_community.utilities import ArxivAPIWrapper, WikipediaAPIWrapper
@@ -48,5 +47,6 @@ if prompt:=st.chat_input(placeholder="What is Machine Learning?") : #:= ->both a
 
 # Value error coming due to conflict between AgentExecutor, where it expects all data and then search in it, but streaming giving
 # only chunk of data, which seems irrelevant to it, so giving Value Error
+
 
 
