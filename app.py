@@ -7,8 +7,6 @@ from langchain.callbacks import StreamlitCallbackHandler  #Used to display thoug
 import os 
 from dotenv import load_dotenv
 
-###
-
 arxiv_wrapper = ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=1250)
 arxiv = ArxivQueryRun(api_wrapper=arxiv_wrapper)
 
@@ -49,6 +47,7 @@ if prompt:=st.chat_input(placeholder="What is Machine Learning?") : #:= ->both a
 
 # Value error coming due to conflict between AgentExecutor, where it expects all data and then search in it, but streaming giving
 # only chunk of data, which seems irrelevant to it, so giving Value Error
+
 
 
 
